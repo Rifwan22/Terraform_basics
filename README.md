@@ -4,7 +4,8 @@ This Article will help you to learn and boost your career with terraform and AWS
 Terraform generates an execution plan describing what it will do to reach the desired state, and then executes it to build the described infrastructure. As the configuration changes, Terraform can determine what changed and create incremental execution plans which can be applied.
 
 Terraform Cycle
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
+![This is an image](https://github.com/Rifwan22/Terraform_basics/blob/main/terraformcycle.png)
 
 
 I will only provision resources that qualify under the AWS free tier so you can practice with me if you need other resources to create please follow Terraform Documentation.
