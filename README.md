@@ -25,13 +25,23 @@ aws configure
 
 The configuration process stores your credentials in a file at ~/.aws/credentials on MacOS and Linux, or %UserProfile%\.aws\credentials on Windows.
 Terraform Config file
+
 Lets create a terraform file called mymain.tf and The file below will contain the resources needed to have an instance of a Linux server running on AWS
 
-required_providerswe are telling Terraform that we want to use AWS as our cloud provider we add a configuration called aws
+* required_providers
+
+we are telling Terraform that we want to use AWS as our cloud provider we add a configuration called aws
+
 Now we need to configure our provider, for that we create a provider named aws and inside we describe the profile of our AWS account that will be used and in which region we want to create our resources.
+
 Last but not the least, we add a resource of the type aws_instance and pass the configuration that matches the Linux server we want to run.
+
 Ok, now let’s go to the AWS account and start to map the concepts on the file above with the actual resources.
-First, go the ‘Services’ and search for EC2 (Elastic Compute Cloud), click it. You will land on a page that will show the EC2 resources that are associated with your account. Search for the ‘Launch Instance’ button and press it. You will now see a list of AMIs (Amazon Machine Image), check the filter ‘Free Tier’, and copy the AMI value that is below the name of the Linux server. Use that value in the mymain.tf file in the ami property.
+
+First, go the ‘Services’ and search for EC2 (Elastic Compute Cloud), click it. You will land on a page that will show the EC2 resources that are associated with your account. Search for the ‘Launch Instance’ button and press it. You will now see a list of AMIs (Amazon Machine Image), check the filter ‘Free Tier’, and copy the AMI value that is 
+
+below the name of the Linux server. Use that value in the mymain.tf file in the ami property.
+
 The next step is to press the ‘Select’ button for the AMI you have to choose before. You will see the list of the available instance types, choose one from the free tier and copy the value on the column ‘Type’ to the mymain.tf file pasting it in the instance_type property.
 In the tags section, you can specify the name of the EC2 instance you are going to create. This name is then used in the column ‘Name’ in the EC2 instances table inside your AWS account.
 
